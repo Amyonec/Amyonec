@@ -89,23 +89,25 @@
 - 三、练习题
 - 3.1 编写一条 CREATE TABLE 语句，用来创建一个包含表 1-A 中所列各项的表 Addressbook （地址簿），并为 regist_no （注册编号）列设置主键约束
 - CREATE TABLE Addressbook (
--  regist_no INTEGER NOT NULL PRIMARY KEY,
+-  regist_no INTEGER NOT NULL,
 -  name VARCHAR(100) NOT NULL,
 -  address VARCHAR(256) NOT NULL,
 -  tel_no CHAR(10),
--  mail_address CHAR(20));
+-  mail_address CHAR(20)
+-  PRIMARY KEY (regist_no));
 - 3.2 假设在创建练习1.1中的 Addressbook 表时忘记添加如下一列 postal_code （邮政编码）了，请把此列添加到 Addressbook 表中。
 -   ALTER TABLE Addressbook ADD COLUMN postal_code CHAR(8) NOT NULL;    
 - 3.3编写 SQL 语句来删除 Addressbook 表。
 -    DROP TABLE Addressbook;    
 - 3.4 编写 SQL 语句来恢复删除掉的 Addressbook 表。
 -     CREATE TABLE Addressbook (
--     regist_no INTEGER NOT NULL PRIMARY KEY,
+-     regist_no INTEGER NOT NULL,
 -     name VARCHAR(100) NOT NULL,
 -     address VARCHAR(256) NOT NULL,
 -     tel_no CHAR(10),
 -     mail_address CHAR(20)
--     postal_code CHAR(8) NOT NULL);
+-     postal_code CHAR(8) NOT NULL
+-     PRIMARY KEY (regist_no));
 
 
 <!---
